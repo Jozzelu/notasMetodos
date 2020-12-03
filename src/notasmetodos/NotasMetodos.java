@@ -28,37 +28,6 @@ public class NotasMetodos {
         }
         return resultado;
     }
-    
-    public static float convertirEuros(String divisa){
-        float euros = 0F;
-        float resultado = 0F;
-        Scanner teclado = new Scanner(System.in);
-        euros=teclado.nextFloat();
-        
-        System.out.println("Introduce la divisa a la que quieres hacer la conversión (libras, dolares o yenes)");
-        divisa=teclado.next();
-        divisa=divisa.toLowerCase();
-        if (divisa.equals("libras")) {
-            float libras=1.2F;
-            resultado=(euros*libras);
-            System.out.println("El cambio de "+euros+"€ a libras es de "+resultado+("£"));
-        }
-        else if (divisa.equals("dolares")) {
-            float dolares=1.3F;
-            resultado=(euros*dolares);
-            System.out.println("El cambio de "+euros+"€ a dólares es de "+resultado+("$"));;
-        }
-        else if (divisa.equals("yenes")) {
-            float yenes = 0.89F;
-            resultado=(euros*yenes);
-            System.out.println("El cambio de "+euros+"€ a yenes es de "+resultado+("¥"));
-        }
-        else {
-            System.out.println("No has introducido bien la divisa");
-        }
-        return resultado;
-    }
-    
     /**
      * @param args the command line arguments
      */
@@ -76,13 +45,5 @@ public class NotasMetodos {
             nota = teclado.nextFloat();
         }
         System.out.println(mostrarNota(nota));
-
-        
-        System.out.println("-----------------------------------------------------------------------------------------------");
-        
-        String divisa="";
-        
-        System.out.println("Introduce un número de euros");
-        convertirEuros(divisa);
     }
 }
