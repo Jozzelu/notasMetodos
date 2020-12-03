@@ -13,22 +13,23 @@ import java.util.Scanner;
  */
 public class NotasMetodos {
     
-    public static void mostrarNota(float nota){
-        
+    public static String mostrarNota(float nota){
+        String resultado="";
         if (nota <= 4.9) {
-            System.out.println("La calificación obtenida es: Suspenso");}
+            resultado=("La calificación obtenida es: Suspenso");}
         else if (nota <= 5.9) {
-            System.out.println("La calificación obtenida es: Aprobado");}
+            resultado=("La calificación obtenida es: Aprobado");}
         else if (nota <= 6.9) {
-            System.out.println("La calificación obtenida es: Bien");}
+            resultado=("La calificación obtenida es: Bien");}
         else if (nota <= 8.9) {
-            System.out.println("La calificación obtenida es: Notable");}
+            resultado=("La calificación obtenida es: Notable");}
         else {
-            System.out.println("La calificación obtenida es: Sobresaliente");
+            resultado=("La calificación obtenida es: Sobresaliente");
         }
+        return resultado;
     }
     
-    public static void convertirEuros(String divisa){
+    public static float convertirEuros(String divisa){
         float euros = 0F;
         float resultado = 0F;
         Scanner teclado = new Scanner(System.in);
@@ -40,7 +41,7 @@ public class NotasMetodos {
         if (divisa.equals("libras")) {
             float libras=1.2F;
             resultado=(euros*libras);
-            System.out.println("El cambio de "+euros+"€ a libras es de "+resultado+("£"));;
+            System.out.println("El cambio de "+euros+"€ a libras es de "+resultado+("£"));
         }
         else if (divisa.equals("dolares")) {
             float dolares=1.3F;
@@ -55,6 +56,7 @@ public class NotasMetodos {
         else {
             System.out.println("No has introducido bien la divisa");
         }
+        return resultado;
     }
     
     /**
@@ -73,7 +75,8 @@ public class NotasMetodos {
             System.out.println("Dime de nuevo la nota");
             nota = teclado.nextFloat();
         }
-        mostrarNota(nota);
+        System.out.println(mostrarNota(nota));
+
         
         System.out.println("-----------------------------------------------------------------------------------------------");
         
